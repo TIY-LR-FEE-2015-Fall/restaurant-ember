@@ -50,8 +50,19 @@ export default Ember.Service.extend({
   },
 
   sendOrder() {
+    let order = this.get('order');
+
     // Save the order
-    // Then Save all order items
-    // Then this.newOrder()
+    order.save().then(() => {
+      // Then Save all order items
+      let orderItemsAreSaving = order.get('items').map((orderItem) => {
+        return orderItem.save();
+      });
+
+      return Ember.RSVP.all(orderItemsAreSaving);
+    }).then(() => {
+      // Then reset the order
+      this.newOrder();
+    });
   },
 });
