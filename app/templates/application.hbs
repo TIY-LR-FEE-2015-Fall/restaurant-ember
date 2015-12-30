@@ -1,1 +1,8 @@
-{{outlet}}
+{{#mdl-nav title='Restaurant Name' fixedHeader=true}}
+  {{mdl-nav-item name='Order'   route='menu'}}
+  {{mdl-nav-item name='Login'      route='admin'}}
+
+  <div class="mdl-grid">
+  	{{outlet}}
+  </div>
+{{/mdl-nav}}
