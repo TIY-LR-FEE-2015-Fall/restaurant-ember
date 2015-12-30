@@ -7,7 +7,7 @@ let { visitable, collection, text } = PageObject;
 
 function role(name) {
   return `[data-role=${name}]`;
-};
+}
 
 export default PageObject.create({
   visit: visitable('/admin/orders'),
