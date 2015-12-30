@@ -1,0 +1,16 @@
+<h2>Dinner Menu</h2>
+
+{{#group-categories items=model as |category|}}
+  <li>
+    <h3>{{category.name}}</h3>
+    <ul>
+      {{#each category.items as |menuItem|}}
+        <li>
+          <span class="menu-item__name">{{menuItem.name}}</span>
+          <span class="menu-item__description">{{menuItem.description}}</span>
+          <span class="menu-item__price">{{menuItem.price}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  </li>
+{{/group-categories}}
