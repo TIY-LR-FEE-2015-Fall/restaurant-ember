@@ -1,0 +1,7 @@
+{{#each cart.order.items as |orderItem|}}
+  <li>{{orderItem.menuItem.name}} - {{orderItem.quantity}}</li>
+{{/each}}
+
+{{cart.order.totalPrice}}
+
+<button onclick={{action "order"}}>Submit Order</button>

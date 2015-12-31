@@ -1,4 +1,6 @@
 export default function() {
+  this.namespace = 'https://guarded-reaches-2626.herokuapp.com/api';
+
   this.get('/menuItems');
   this.post('/menuItems');
 

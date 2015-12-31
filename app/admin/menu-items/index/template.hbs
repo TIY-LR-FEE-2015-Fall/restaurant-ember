@@ -1,0 +1,15 @@
+{{#link-to "admin.menu-items.new" data-role="new-menu-item"}}
+  {{mdl-button text="New Menu Item"}}
+{{/link-to}}
+
+<ul>
+  {{#each model as |menuItem|}}
+    <li data-role="menu-item">
+      <span data-role="menu-item__name">{{menuItem.name}}</span>
+      <span data-role="menu-item__price">{{menuItem.price}}</span>
+      <span data-role="menu-item__description">{{menuItem.description}}</span>
+
+      {{#link-to "admin.menu-items.edit" menuItem data-role="menu-item__edit" }}Edit{{/link-to}}
+    </li>
+  {{/each}}
+</ul>

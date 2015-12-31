@@ -38,12 +38,15 @@
     "ember-cli-sri": "^1.2.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-composability": "0.2.1",
+    "ember-cpm": "2.1.1",
     "ember-data": "2.2.1",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "ember-legacy-views": "0.2.0",
     "ember-material-lite": "0.1.14",
+    "ember-route-action-helper": "0.2.0",
     "ember-simple-auth": "1.0.1",
+    "ember-simple-form": "0.1.0",
     "ember-truth-helpers": "1.2.0"
   },
   "dependencies": {

@@ -1,0 +1,7 @@
+{{outlet}}
+
+{{#simple-form onsubmit=(route-action 'foo' model) as |form|}}
+  {{input value=form.foo}}
+
+  <button>Submit</button>
+{{/simple-form}}

@@ -1,26 +1,11 @@
-<div data-role="order-detail">
-  <div data-role="order-detail__total">$10.00</div>
+{{#each model as |order|}}
+  <div data-role="order-detail">
+    <div data-role="order-detail__total">$10.00</div>
 
-  <div data-role="order-detail-order-item">
-    <div data-role="order-detail-order-item__name">Fries</div>
+    {{#each order.items as |orderItem|}}
+      <div data-role="order-detail-order-item">
+        <div data-role="order-detail-order-item__name">{{orderItem.menuItem.name}}</div>
+      </div>
+    {{/each}}
   </div>
-  <div data-role="order-detail-order-item"></div>
-</div>
-
-<div data-role="order-detail">
-  <div data-role="order-detail__total">$10.00</div>
-
-  <div data-role="order-detail-order-item">
-    <div data-role="order-detail-order-item__name">Fries</div>
-  </div>
-  <div data-role="order-detail-order-item"></div>
-</div>
-
-<div data-role="order-detail">
-  <div data-role="order-detail__total">$10.00</div>
-
-  <div data-role="order-detail-order-item">
-    <div data-role="order-detail-order-item__name">Fries</div>
-  </div>
-  <div data-role="order-detail-order-item"></div>
-</div>
+{{/each}}

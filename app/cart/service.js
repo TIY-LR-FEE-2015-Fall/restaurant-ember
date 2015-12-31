@@ -19,7 +19,7 @@ export default Ember.Service.extend({
 
   firstForMenuItem(menuItem) {
     return this.get('order.items').filter((current) => {
-      return current.get('menuItem') === menuItem;
+      return current.get('menuItem.id') === menuItem.id;
     })[0];
   },
 
@@ -45,7 +45,8 @@ export default Ember.Service.extend({
       orderItem.incrementProperty('quantity', 1);
     } else {
       // Create a new order item for the current order
-      this.get('store').createRecord('order-item', {order: this.get('order'), menuItem: itemToAdd, quantity: 1});
+      let orderItem = this.get('store').createRecord('order-item', { menuItem: itemToAdd, quantity: 1});
+      this.get('order.items').pushObject(orderItem);
     }
   },
 
